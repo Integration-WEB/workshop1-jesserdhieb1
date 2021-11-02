@@ -162,6 +162,18 @@ ________________________
 
 .item1{
     background-color: rgb(255, 190, 225);
+   /* position: relative;  !*par rapport au container*!
+    top: 50px;
+    left: 50px;*/
+   /* position: absolute; !*par rapport toute la page*!
+    top: 50px;
+    left: 50px;*/
+   /* position: fixed; !*fixé par rapport a la template*!
+    top: 50px;
+    left: 50px;*/
+    /*position: sticky; !*fixé par rapport au container*!
+    top: 50px;
+    left: 50px;*/
 }
 
 .item2{
@@ -173,6 +185,13 @@ ________________________
 Units
 ________________________
 */
+.box__percent {
+    width: 50%;
+}
+.box__pixels {
+    width: 200px;
+}
+
 .box__container {
     height: auto;
     margin: 10px;
@@ -189,6 +208,15 @@ ________________________
     height: auto;
     margin: 10px;
     font-size: 25px;
+}
+.font__1em {
+    font-size: 1em; /*prend la taille du fonte du parent */
+}
+.font__1rem {       /*prend la taille de la fonte par defaut qui est 16px */
+    font-size: 1rem;
+}
+.font__100percent {
+    font-size: 100%;
 }
 
 
@@ -215,19 +243,56 @@ ________________________
     background-color: var(--primary-100);
 }
 /* Extra small devices (phones, 600px and down) */
-
+@media screen and (max-width: 600px){
+    .media__container{
+        height: 20vh;
+        width: 90vw;
+        margin-bottom: 50px;
+        background-color: var(--primary-200);
+    }
+}
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-
+@media screen and (min-width: 600px) and (max-width:768px ){
+    .media__container{
+        height: 20vh;
+        width: 90vw;
+        margin-bottom: 50px;
+        background-color: var(--primary-400);
+    }
+}
 
 
 /* Medium devices (landscape tablets, 768px and up) */
-
+@media screen and (min-width: 768px) and (max-width:992px ){
+    .media__container{
+        height: 20vh;
+        width: 90vw;
+        margin-bottom: 50px;
+        background-color: var(--primary-600);
+    }
+}
 
 
 /* Large devices (laptops/desktops, 992px and up) */
 
+@media screen and (min-width: 992px) and (max-width:1200px){
+    .media__container{
+        height: 20vh;
+        width: 90vw;
+        margin-bottom: 50px;
+        background-color: var(--primary-800);
+    }
+}
 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and  (min-width:1200px){
+    .media__container{
+        height: 20vh;
+        width: 90vw;
+        margin-bottom: 50px;
+        background-color: var(--primary-900);
+    }
+}
